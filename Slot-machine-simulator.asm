@@ -105,6 +105,7 @@ StartScreen			 db '              ===============================================
 GameoverScreen	 db '             ___________________',0ah,0dh
 	db '             ||                   ||',0ah,0dh                                        
 	db '             ||  >> GAMEOVER <<   ||',0ah,0dh
+   db '             ||  >> GAMEOVER <<   ||',0ah,0dh
 	db '             ||___________________||',0ah,0dh	
 	db '$',0ah,0dh
 PlayerName	       db      15, ?,  15 dup('$')
