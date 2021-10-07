@@ -1,3 +1,3 @@
-# Slot Machine simulator with Graphical User Interface GUI using assembly language
-Slot machine simulator is  purely built using Assembly language 8086 and also implemented graphical Interface using 8086.
-Run this file using EMU8086.
+# Slot Machine simulator with a Graphical User Interface(GUI) built using 8086 Assembly Language
+Slot machine simulator is purely built using 8086 Assembly language and also implements a graphical user interface.
+Run this file using EMU8086 (8086 emulator).
