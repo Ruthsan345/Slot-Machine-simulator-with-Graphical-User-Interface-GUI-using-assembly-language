@@ -34,10 +34,6 @@ Print MACRO row, column, color
    pop ax
 ENDM Print     
 
-    
-
- 
-
 PrintText Macro row , column , text
    push ax
    push bx
@@ -59,7 +55,6 @@ PrintText Macro row , column , text
    pop ax
 ENDM PrintText
                  
-
 ClearScreen MACRO
         
     mov ax, 0600h  ;al=0 => Clear
@@ -146,8 +141,6 @@ MAIN    PROC FAR
   call StartMenu       
   ClearScreen  
   	 	
-
-
 ;clearscreen
   call DrawInterface
  
@@ -163,8 +156,6 @@ MAIN        ENDP
 	push dx
 	push ds 
             
-       
-          
 	PrintText 1,1,StartScreen	
 
 	;hide curser
@@ -197,8 +188,6 @@ MAIN        ENDP
 	mov dx, offset PlayerName         
 	int 21h
    
-   
-   
 	cmp PlayerName[1], 0	;Check that input is not empty
 	jz LoopOnName
 
@@ -215,7 +204,7 @@ MAIN        ENDP
 	ja	LoopOnName
 
 	ExitLoopOnName: 
-noo:	PrintText 13,12,betvalues
+   noo:	PrintText 13,12,betvalues
 	PrintText 16,8,AskPlayeramount 
     
     mov ah, 01h
@@ -227,23 +216,20 @@ noo:	PrintText 13,12,betvalues
 	jz goo
 	cmp al,2h
 	mov bl,5h
-	jz goo
+	jz gooF
 	cmp al,3h
 	mov bl,7h
 	jz goo
 	
 	jmp noo
 	
-	
-	  
-	
 	goo:
 	lea si,amount
 	;add si,1 
 	mov [si],bl
 	;call string2number
- ;   call aaaa
-    ; mov ax,50               
+   ;call aaaa
+   ;mov ax,50               
 mov dh, 10
 mov dl, 10
 mov bh, 0
